@@ -19,7 +19,9 @@ pipeline {
         stage('Prod') {
             steps {
                 echo "Ejecutar npm start" 
-                sh(script: 'npm start', returnStatus: true, timeout: 30)
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh 'npm start'
+                }
             }
         }
     }
