@@ -10,7 +10,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-
         stage('Test') {
             steps {
                 echo "Ejecutar npm test push" 
