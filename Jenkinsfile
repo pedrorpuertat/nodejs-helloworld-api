@@ -16,11 +16,5 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Prod') {
-            steps {
-                echo "Ejecutar npm start" 
-                sh 'npm start'
-            }
-        }
     }
 }
