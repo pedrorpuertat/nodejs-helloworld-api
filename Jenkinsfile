@@ -16,13 +16,5 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Prod') {
-            steps {
-                echo "Ejecutar npm start" 
-                timeout(time: 1, unit: 'MINUTES') {
-                    sh 'npm start'
-                }
-            }
-        }
     }
 }
